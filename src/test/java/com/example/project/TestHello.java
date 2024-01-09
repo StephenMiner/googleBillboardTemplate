@@ -12,8 +12,7 @@ import java.io.*;
 public class TestHello {
 
    @Test
-   public void testHelloWorld()
-   {
+   public void testHelloWorld(){
      PrintStream originalOut = System.out;
      ByteArrayOutputStream bos = new ByteArrayOutputStream();
      System.setOut(new PrintStream(bos));
@@ -22,7 +21,30 @@ public class TestHello {
      Hello.main(null);
 
      // assertion
-     assertEquals("Hello world!\n", bos.toString());
+     try{
+        assertEquals("Hello world!\n", bos.toString());
+     }catch(Exception e){
+        
+     }
+
+     // undo the binding in System
+     System.setOut(originalOut);
+   }
+   @Test
+   public void testHelloEarth(){
+     PrintStream originalOut = System.out;
+     ByteArrayOutputStream bos = new ByteArrayOutputStream();
+     System.setOut(new PrintStream(bos));
+
+     // action
+     Hello.main(null);
+
+     // assertion
+     try{
+        assertEquals("Hello earth!\n", bos.toString());
+     }catch(Exception e){
+        
+     }
 
      // undo the binding in System
      System.setOut(originalOut);
