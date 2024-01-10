@@ -12,7 +12,7 @@ import java.io.*;
 public class TestHello {
 
    @Test
-   public void testHelloWorld(){
+   public void testBillboard(){
      PrintStream originalOut = System.out;
      ByteArrayOutputStream bos = new ByteArrayOutputStream();
      System.setOut(new PrintStream(bos));
@@ -22,7 +22,7 @@ public class TestHello {
 
      // assertion
      try{
-        assertEquals("Hello world!\n", bos.toString());
+        assertEquals("2.718281828\n", bos.toString());
      }catch(Exception e){
         
      }
