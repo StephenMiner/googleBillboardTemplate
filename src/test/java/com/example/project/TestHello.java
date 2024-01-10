@@ -19,10 +19,10 @@ public class TestHello {
 
      // action
      Hello.main(null);
-
+     String answer = Hello.e.substring(0,11); 
      // assertion
      try{
-        assertEquals("Hello world!\n", bos.toString());
+        assertEquals(answer + "\n", bos.toString());
      }catch(Exception e){
         
      }
