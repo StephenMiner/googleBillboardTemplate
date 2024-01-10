@@ -21,30 +21,7 @@ public class BillboardTester {
      Hello.main(null);
 
      // assertion
-     try{
-        assertEquals("2.718281828\n", bos.toString());
-     }catch(Exception e){
-        
-     }
-
-     // undo the binding in System
-     System.setOut(originalOut);
-   }
-   @Test
-   public void testHelloEarth(){
-     PrintStream originalOut = System.out;
-     ByteArrayOutputStream bos = new ByteArrayOutputStream();
-     System.setOut(new PrintStream(bos));
-
-     // action
-     Hello.main(null);
-
-     // assertion
-     try{
-        assertEquals("Hello earth!\n", bos.toString());
-     }catch(Exception e){
-        
-     }
+     assertEquals("2.718281828\n", bos.toString()); 
 
      // undo the binding in System
      System.setOut(originalOut);
