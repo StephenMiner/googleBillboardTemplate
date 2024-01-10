@@ -9,7 +9,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 import java.io.*;
 
-public class TestHello {
+public class BillboardTester {
 
    @Test
    public void testBillboard(){
