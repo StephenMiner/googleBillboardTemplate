@@ -5,6 +5,11 @@ public class GoogleBillboard {
 	public static void main(final String[] args) {
 		System.out.println("Not the right string, tests will fail!");
 	}
+	
+
+	//Finish this function
+	public boolean isPrime(){
+	}
 
 }
 
