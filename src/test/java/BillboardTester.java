@@ -18,7 +18,7 @@ public class BillboardTester {
      System.setOut(new PrintStream(bos));
 
      // action
-     Hello.main(null);
+     GoogleBillboard.main(null);
 
      // assertion
      assertEquals("7.427466391E9\n", bos.toString()); 
